@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>error</title>
+    <style>
+      .error {
+        color: rgb(249, 39, 39);
+      }
+      .success {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter the number" id="val" />
+    <p id="ans"></p>
+    <button id="submit" type="button">Submit</button>
+    <script>
+      const valInput = document.getElementById("val");
+      const ans = document.getElementById("ans");
+      const submit = document.getElementById("submit");
+
+      submit.addEventListener("click", () => {
+        const val = valInput.value;
+        const numex = /^[0-9]+$/;
+
+        ans.classList.remove("error", "success");
+
+        if (numex.test(val)) {
+          ans.innerHTML = "Success";
+          ans.classList.add("success");
+        } else {
+          ans.innerHTML = "Please enter a number";
+          ans.classList.add("error");
+        }
+      });
+    </script>
+  </body>
+</html>

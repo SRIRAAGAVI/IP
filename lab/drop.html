@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>dropdown</title>
+  </head>
+  <style>
+    p {
+      margin: 5px 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+  <body>
+    <div id="drop">
+      <p id="user">User</p>
+      <span id="admin"></span>
+      <span id="cust"></span>
+    </div>
+    <script>
+      const user = document.getElementById("user");
+      const admin = document.getElementById("admin");
+      const cust = document.getElementById("cust");
+      user.addEventListener("click", () => {
+        admin.innerHTML = "Adminstrator";
+        cust.innerHTML = "Customer";
+      });
+    </script>
+  </body>
+</html>

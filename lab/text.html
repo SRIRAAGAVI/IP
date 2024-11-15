@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Text</title>
+    <style>
+      .container h4 {
+        background-color: red;
+        color: blue;
+        font-size: 10px;
+        padding: 10px;
+        font-family: "Times New Roman", Times, serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text changer</h1>
+    <div class="container">
+      <h4 id="txt">hello</h4>
+      <button onclick="change()">change</button>
+    </div>
+    <script>
+      function change() {
+        const txt = document.getElementById("txt");
+        txt.style.backgroundColor = "yellow";
+        txt.style.color = "green";
+        txt.style.fontSize = "12px";
+        txt.style.fontWeight = "900";
+        txt.style.fontFamily = "Arial, sans-serif";
+      }
+    </script>
+  </body>
+</html>

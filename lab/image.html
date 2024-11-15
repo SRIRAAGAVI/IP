@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>image hide and show</title>
+    <style>
+      img {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Hide and Show</h1>
+    <img src="" alt="" id="img" />
+    <button onclick="show()">Show</button>
+    <button onclick="hide()">Hide</button>
+    <script>
+      const img = document.getElementById("img");
+      function show() {
+        img.src = "lib.jpeg";
+      }
+      function hide() {
+        img.src = " ";
+      }
+    </script>
+  </body>
+</html>
